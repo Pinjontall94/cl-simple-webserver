@@ -1,6 +1,8 @@
 (defpackage simple-webserver
   (:use :cl)
-  (:local-nicknames (:h :hunchentoot)))
+  (:local-nicknames (:h :hunchentoot))
+  (:export :start-server
+           :stop-server))
 (in-package :simple-webserver)
 
 (defvar *acceptor* (make-instance 'h:easy-acceptor
